@@ -27,3 +27,21 @@ app.controller('PlayerController', ['$scope', function($scope) {
 
 app.controller('RelatedController', ['$scope', function($scope) {
 }]);
+
+
+app.controller('ClockController', function($scope) {
+  var updateClock = function() {
+    $scope.clock = new Date();
+  };
+  var timer = setInterval(function() {
+    $scope.$apply(updateClock);
+  }, 1000);
+  updateClock();
+});
+
+
+app.controller('ClickCounterController', function($scope) {
+  $scope.counter = 0;
+  $scope.add = function(amount) { $scope.counter += amount; };
+  $scope.subtract = function(amount) { $scope.counter -= amount; };
+});
