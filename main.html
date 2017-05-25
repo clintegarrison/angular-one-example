@@ -32,6 +32,15 @@
         <h4>Current count: {{ counter }}</h4>
       </div>
 
+      <div ng-controller="PlayerController">
+        <ul id="programs_list" class="">
+          <li ng-repeat="program in programs" ng-click="play(program)">
+            <span class="large-12">{{ program.title.$text }}</span>
+          </li>
+        </ul>
+        <button ng-click="actuallyPlay()" class="button">Play</button>
+      </div>
+
     </div>
   </body>
 </html>
