@@ -1,0 +1,25 @@
+<html ng-app="myApp"> <!-- ng-app is the directive that tells AngularJS that this is the root element of the AngularJS application. -->
+  <head>
+    <title>My Angular One Example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="js/main.js"></script>
+  </head>
+  <body>
+    <div>
+      <!-- ng-model is a directive that binds an HTML form element to a variable in the scope. -->
+      <input type="text" ng-model="yourName" placeholder="Enter a name here">
+
+      <!--  {{ someVar }} this is root scope -->
+      <h1>Hello, {{ yourName }}!</h1>
+      <h1>RootScope Name, {{ name }}!</h1>
+
+      <!--  this creates a new scope -->
+      <!--  ng-controller controls the data -->
+      <div ng-controller="PlayerController">
+        <button ng-click="play()" class="button" ng-show="!playing">Play</button>
+        <button ng-click="stop()" class="button alert" ng-show="playing">Stop</button>
+        Playing audio: <b>{{ playing }}</b>
+      </div>
+    </div>
+  </body>
+</html>
