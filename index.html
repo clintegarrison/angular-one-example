@@ -34,11 +34,17 @@
 
       <div ng-controller="PlayerController">
         <ul id="programs_list" class="">
-          <li ng-repeat="program in programs" ng-click="play(program)">
-            <span class="large-12">{{ program.title.$text }}</span>
+          <li ng-repeat="program in programs">
+            <npr-link ng-model="program" player="player"></npr-link>
           </li>
         </ul>
-        <button ng-click="actuallyPlay()" class="button">Play</button>
+      </div>
+
+      <div class="large-4 small-4 columns" ng-controller="RelatedController">
+        <h2>Related content</h2>
+        <ul id="related">
+          <li ng-repeat="s in related"><a href="{{ s.link }}">{{ s.caption }}</a></li>
+        </ul>
       </div>
 
     </div>

@@ -1,0 +1,24 @@
+{
+  "name": "angular-one-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "http-server": "^0.10.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "http-server -p 8080 -o",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clintegarrison/angular-one-example.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/clintegarrison/angular-one-example/issues"
+  },
+  "homepage": "https://github.com/clintegarrison/angular-one-example#readme"
+}
